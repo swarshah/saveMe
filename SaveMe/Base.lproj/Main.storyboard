@@ -39,7 +39,7 @@
         <!--First Run View Controller-->
         <scene sceneID="9aK-3t-m3g">
             <objects>
-                <viewController id="uwO-TF-Xky" customClass="FirstRunViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addScreen" id="uwO-TF-Xky" customClass="FirstRunViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d4J-Gs-Y2x"/>
                         <viewControllerLayoutGuide type="bottom" id="Zcw-qp-6hc"/>
