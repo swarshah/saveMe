@@ -25,6 +25,9 @@
     NSString *loadString = [defaults objectForKey:@"firstRun"];
     if (loadString == nil) {
         NSLog(@"BLANK");
+        UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIViewController *vc = [main instantiateViewControllerWithIdentifier:@"addScreen"];
+        [self presentViewController:vc animated:NO completion:nil ];
     }
     else{
         NSLog(@"NOT");
