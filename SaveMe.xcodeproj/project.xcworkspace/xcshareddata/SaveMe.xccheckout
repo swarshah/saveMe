@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0EE9BE99-0CCC-43DD-9FDE-44924BEEAAED</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SaveMe</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AC6153AB-D6BF-49ED-B4FB-1CFD55A3CBAE</key>
+		<string>https://github.com/SwarShah/saveMe.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SaveMe.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AC6153AB-D6BF-49ED-B4FB-1CFD55A3CBAE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/SwarShah/saveMe.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AC6153AB-D6BF-49ED-B4FB-1CFD55A3CBAE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AC6153AB-D6BF-49ED-B4FB-1CFD55A3CBAE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>saveMe</string>
+		</dict>
+	</array>
+</dict>
+</plist>
