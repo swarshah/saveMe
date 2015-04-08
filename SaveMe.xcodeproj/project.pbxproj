@@ -22,6 +22,7 @@
 		58FC62821AD59B6600A75564 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FC62611AD59B6600A75564 /* UIKit.framework */; };
 		58FC628A1AD59B6600A75564 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58FC62881AD59B6600A75564 /* InfoPlist.strings */; };
 		58FC628C1AD59B6600A75564 /* SaveMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FC628B1AD59B6600A75564 /* SaveMeTests.m */; };
+		58FC62971AD59D1300A75564 /* FirstRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FC62961AD59D1300A75564 /* FirstRunViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		58FC62871AD59B6600A75564 /* SaveMeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SaveMeTests-Info.plist"; sourceTree = "<group>"; };
 		58FC62891AD59B6600A75564 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		58FC628B1AD59B6600A75564 /* SaveMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveMeTests.m; sourceTree = "<group>"; };
+		58FC62951AD59D1300A75564 /* FirstRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstRunViewController.h; sourceTree = "<group>"; };
+		58FC62961AD59D1300A75564 /* FirstRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstRunViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 		58FC62631AD59B6600A75564 /* SaveMe */ = {
 			isa = PBXGroup;
 			children = (
+				58FC62951AD59D1300A75564 /* FirstRunViewController.h */,
+				58FC62961AD59D1300A75564 /* FirstRunViewController.m */,
 				58FC626C1AD59B6600A75564 /* AppDelegate.h */,
 				58FC626D1AD59B6600A75564 /* AppDelegate.m */,
 				58FC626F1AD59B6600A75564 /* Main.storyboard */,
@@ -258,6 +263,7 @@
 				58FC626E1AD59B6600A75564 /* AppDelegate.m in Sources */,
 				58FC62741AD59B6600A75564 /* FirstViewController.m in Sources */,
 				58FC626A1AD59B6600A75564 /* main.m in Sources */,
+				58FC62971AD59D1300A75564 /* FirstRunViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
