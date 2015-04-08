@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"false" forKey: @"firstRun"];
+    [defaults synchronize];
 }
 
 - (void)didReceiveMemoryWarning
