@@ -20,6 +20,17 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *loadString = [defaults objectForKey:@"firstRun"];
+    if (loadString == nil) {
+        NSLog(@"BLANK");
+    }
+    else{
+        NSLog(@"NOT");
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
