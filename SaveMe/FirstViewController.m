@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 
 @interface FirstViewController ()
+- (IBAction)savemeButton:(id)sender;
 
 @end
 
@@ -44,4 +45,6 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)savemeButton:(id)sender {
+}
 @end
