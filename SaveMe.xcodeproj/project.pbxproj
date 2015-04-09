@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58C3C8CE1AD647E400585FF6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C3C8CD1AD647E400585FF6 /* CoreLocation.framework */; };
 		58FC625E1AD59B6600A75564 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FC625D1AD59B6600A75564 /* Foundation.framework */; };
 		58FC62601AD59B6600A75564 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FC625F1AD59B6600A75564 /* CoreGraphics.framework */; };
 		58FC62621AD59B6600A75564 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FC62611AD59B6600A75564 /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58C3C8CD1AD647E400585FF6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		58FC625A1AD59B6600A75564 /* SaveMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FC625D1AD59B6600A75564 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		58FC625F1AD59B6600A75564 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C3C8CE1AD647E400585FF6 /* CoreLocation.framework in Frameworks */,
 				58FC62601AD59B6600A75564 /* CoreGraphics.framework in Frameworks */,
 				58FC62621AD59B6600A75564 /* UIKit.framework in Frameworks */,
 				58FC625E1AD59B6600A75564 /* Foundation.framework in Frameworks */,
@@ -107,6 +110,7 @@
 		58FC625C1AD59B6600A75564 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58C3C8CD1AD647E400585FF6 /* CoreLocation.framework */,
 				58FC625D1AD59B6600A75564 /* Foundation.framework */,
 				58FC625F1AD59B6600A75564 /* CoreGraphics.framework */,
 				58FC62611AD59B6600A75564 /* UIKit.framework */,
@@ -472,6 +476,7 @@
 				58FC62911AD59B6600A75564 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58FC62921AD59B6600A75564 /* Build configuration list for PBXNativeTarget "SaveMeTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +485,7 @@
 				58FC62941AD59B6600A75564 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
