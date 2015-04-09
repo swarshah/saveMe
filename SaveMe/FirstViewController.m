@@ -7,18 +7,21 @@
 //
 
 #import "FirstViewController.h"
-
-@interface FirstViewController ()
+#import <CoreLocation/CoreLocation.h>
+@interface FirstViewController ()  <CLLocationManagerDelegate>
 - (IBAction)savemeButton:(id)sender;
 
 @end
 
-@implementation FirstViewController
+@implementation FirstViewController{
+    CLLocationManager *manager;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    manager = [[CLLocationManager alloc] init]; //init location manager
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -39,6 +42,7 @@
     }
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -46,5 +50,27 @@
 }
 
 - (IBAction)savemeButton:(id)sender {
+    manager.delegate = self;
+    manager.desiredAccuracy = kCLLocationAccuracyBest;  //get best accuracy
+    [manager startUpdatingLocation];    //start getting location
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    NSLog(@"Error : %@", error);
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
+    //NSLog(@"Location: %f", newLocation.coordinate.longitude);
+    CLLocation *currentLocation = newLocation;  //assigning new location
+    NSString *latitude, *longitude; //created strings
+    if(currentLocation != nil){ //checking for not null current location
+        latitude = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
+        longitude = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
+    }
+    NSLog(@"Latitude: %@", latitude);
+    NSLog(@"Latitude: %@", longitude);
+    //stop updating location
+    [manager stopUpdatingLocation];
 }
 @end
