@@ -56,5 +56,8 @@
     [defaults setObject:self.cEmail.text forKey: @"cEmail"];
     [defaults synchronize];
     NSLog(@"Saved all data");
+    UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *vc = [main instantiateViewControllerWithIdentifier:@"firstScreen"];
+    [self presentViewController:vc animated:YES completion:nil ];
 }
 @end
