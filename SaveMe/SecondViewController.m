@@ -32,6 +32,21 @@
 }
 
 - (IBAction)edit:(id)sender {
+    //When Save is clicked
+    if(self.name.isEnabled){
+        [self.editBtn setTitle:@"Edit"];
+        self.name.enabled = NO;
+        self.phone.enabled = NO;
+        self.email.enabled = NO;
+    }
+    //Wehn Edit is clicked
+    else{
+        [self.editBtn setTitle:@"Save"];
+        self.name.enabled = YES;
+        self.phone.enabled = YES;
+        self.email.enabled = YES;
+    }
+
 }
 
 @end
