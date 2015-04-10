@@ -202,8 +202,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="Z7h-1E-pvt"/>
+                    <tabBarItem key="tabBarItem" title="Contact" image="man.png" id="Z7h-1E-pvt"/>
                     <connections>
+                        <outlet property="editBtn" destination="uoT-bT-ued" id="znB-C9-uzJ"/>
                         <outlet property="email" destination="OYh-R4-tGp" id="oeX-2k-RMw"/>
                         <outlet property="name" destination="w8C-fH-mdQ" id="XQV-Co-VFA"/>
                         <outlet property="phone" destination="XW2-Hr-w2G" id="BKI-t7-tFd"/>
@@ -232,11 +233,11 @@
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
-        <!--Navigation Controller - First-->
+        <!--Navigation Controller - Home-->
         <scene sceneID="vdg-xP-EFg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j84-wo-7qF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="u1e-5L-l1D"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home.png" id="u1e-5L-l1D"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PLo-yT-TUx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -253,8 +254,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="home.png" width="30" height="30"/>
+        <image name="man.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -262,6 +263,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ltd-ER-vcp"/>
+        <segue reference="qc4-a8-4yq"/>
     </inferredMetricsTieBreakers>
 </document>
