@@ -37,13 +37,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSLog([defaults objectForKey:@"oName"]);
-    NSLog([defaults objectForKey:@"cName"]);
-    NSLog([defaults objectForKey:@"cNumber"]);
-    NSLog([defaults objectForKey:@"cEmail"]);
-    NSLog([defaults objectForKey:@"firstRun"]);
-   //NSLog(loadString);
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,6 +44,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 //Saves all values
 - (IBAction)saveButton:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
