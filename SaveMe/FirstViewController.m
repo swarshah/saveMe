@@ -73,7 +73,7 @@
     NSLog(@"Latitude: %@", longitude);
     //stop updating location
     [manager stopUpdatingLocation];
-    //[self getJSON];
+    //calling function
     [self getDetails:latitude :longitude];
 }
 
@@ -91,10 +91,27 @@
 
 //sending http post req
 -(void) sendHttpReq :(NSString*)params {
-    NSLog(@"%@", params);
-
+    //API URL
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://saveme.ml/saveMeAPI/api.php"]];
+    //Headers
+    [request setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+    [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setHTTPMethod:@"POST"];
+    NSError *error = nil;
+    NSURLResponse *response = nil;
+    //Sending request
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    if (error) {
+        //error
+        NSLog(@"Error:%@", error.localizedDescription);
+    }
+    else {
+        //success
+        NSLog(@"Success");
+        //Data from request
+        NSString *newStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"%@", newStr);
+    }
 }
-
-
 
 @end
