@@ -81,15 +81,18 @@
 - (void) getDetails :(NSString*)latitude :(NSString*)longitude{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *name = [defaults objectForKey:@"oName"];
-    NSString *phone = [defaults objectForKey:@"cPhone"];
+    NSString *phone = [defaults objectForKey:@"cNumber"];
     NSString *email = [defaults objectForKey:@"cEmail"];
     NSString *location = [NSString stringWithFormat:@"%@,%@", latitude, longitude];
-    [self sendHttpReq:name :phone :email :location];
+    NSString *params = [NSString stringWithFormat:@"name=%@&phone=%@&email=%@&location=%@", name, phone, email, location];
+    //calling function with params
+    [self sendHttpReq:params];
 }
 
--(void) sendHttpReq :(NSString*)name :(NSString*)phone :(NSString*)email :(NSString*)location{
-    NSLog(@"%@", location);
-    
+//sending http post req
+-(void) sendHttpReq :(NSString*)params {
+    NSLog(@"%@", params);
+
 }
 
 
