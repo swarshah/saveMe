@@ -48,6 +48,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+//Save me button press
 - (IBAction)savemeButton:(id)sender {
     manager.delegate = self;
     manager.desiredAccuracy = kCLLocationAccuracyBest;  //get best accuracy
@@ -71,6 +73,18 @@
     NSLog(@"Latitude: %@", longitude);
     //stop updating location
     [manager stopUpdatingLocation];
+    //[self getJSON];
+    [self getDetails:latitude :longitude];
+}
+
+//function to get details from NSDefaults
+- (void) getDetails :(NSString*)latitude :(NSString*)longitude{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *name = [defaults objectForKey:@"oName"];
+    NSString *phone = [defaults objectForKey:@"cPhone"];
+    NSString *email = [defaults objectForKey:@"cEmail"];
+    NSString *location = [NSString stringWithFormat:@"%@,%@", latitude, longitude];
+    
 }
 
 @end
