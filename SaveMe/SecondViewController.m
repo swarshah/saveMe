@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *phone;
 @property (weak, nonatomic) IBOutlet UITextField *email;
 - (IBAction)edit:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editBtn;
 
 @end
 
@@ -32,4 +33,5 @@
 
 - (IBAction)edit:(id)sender {
 }
+
 @end
