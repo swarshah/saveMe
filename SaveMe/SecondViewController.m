@@ -9,6 +9,10 @@
 #import "SecondViewController.h"
 
 @interface SecondViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *name;
+@property (weak, nonatomic) IBOutlet UITextField *phone;
+@property (weak, nonatomic) IBOutlet UITextField *email;
+- (IBAction)edit:(id)sender;
 
 @end
 
@@ -26,4 +30,6 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)edit:(id)sender {
+}
 @end
