@@ -29,17 +29,16 @@
     NSString *loadString = [defaults objectForKey:@"firstRun"];
     if (loadString == nil) {
         NSLog(@"BLANK");
-        UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        UIViewController *vc = [main instantiateViewControllerWithIdentifier:@"addScreen"];
-        [self presentViewController:vc animated:NO completion:nil ];
+        [self performSegueWithIdentifier:@"Associate" sender:NULL];
     }
     else{
-        NSLog(@"NOT");
-        /*UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        UIViewController *vc = [main instantiateViewControllerWithIdentifier:@"addScreen"];
-        [self presentViewController:vc animated:NO completion:nil ];*/
-
+        NSLog(@"NOT BLANK");
     }
+}
+
+//Hiding nav bar
+- (void) viewWillAppear:(BOOL)animated{
+    [[self navigationController] setNavigationBarHidden:YES];
 }
 
 
@@ -73,4 +72,5 @@
     //stop updating location
     [manager stopUpdatingLocation];
 }
+
 @end
