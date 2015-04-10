@@ -84,7 +84,14 @@
     NSString *phone = [defaults objectForKey:@"cPhone"];
     NSString *email = [defaults objectForKey:@"cEmail"];
     NSString *location = [NSString stringWithFormat:@"%@,%@", latitude, longitude];
+    [self sendHttpReq:name :phone :email :location];
+}
+
+-(void) sendHttpReq :(NSString*)name :(NSString*)phone :(NSString*)email :(NSString*)location{
+    NSLog(@"%@", location);
     
 }
+
+
 
 @end
