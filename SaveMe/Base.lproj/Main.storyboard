@@ -123,13 +123,6 @@
                                     <action selector="saveButton:" destination="uwO-TF-Xky" eventType="touchUpInside" id="vEs-zA-YJY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mte-4V-3y4">
-                                <rect key="frame" x="20" y="386" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.02357372019003634" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -138,7 +131,6 @@
                         <outlet property="cEmail" destination="vQW-lf-qns" id="NVx-ph-g0R"/>
                         <outlet property="cName" destination="uUe-Mi-zw1" id="Vau-NR-Kfd"/>
                         <outlet property="cNumber" destination="hrP-54-37Y" id="gdT-7w-kF0"/>
-                        <outlet property="error" destination="Mte-4V-3y4" id="LzT-rm-JaA"/>
                         <outlet property="oName" destination="BTK-fL-48c" id="Nld-ih-OVn"/>
                         <segue destination="CZ4-MO-1fc" kind="push" identifier="AssociateBack" id="ltd-ER-vcp"/>
                     </connections>
