@@ -44,15 +44,25 @@
 - (IBAction)edit:(id)sender {
     //When Save is clicked
     if(self.name.isEnabled){
-        [self.editBtn setTitle:@"Edit"];
-        self.name.enabled = NO;
-        self.phone.enabled = NO;
-        self.email.enabled = NO;
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:self.name.text forKey: @"cName"];
-        [defaults setObject:self.phone.text forKey: @"cNumber"];
-        [defaults setObject:self.email.text forKey: @"cEmail"];
-        [defaults synchronize];
+        if([self.name.text isEqual:@""] || [self.phone.text isEqual:@""] || [self.email.text isEqual:@""]){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"All fields are required."
+                                                            message:@"You must fill all the details to use this app."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
+        else{
+            [self.editBtn setTitle:@"Edit"];
+            self.name.enabled = NO;
+            self.phone.enabled = NO;
+            self.email.enabled = NO;
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setObject:self.name.text forKey: @"cName"];
+            [defaults setObject:self.phone.text forKey: @"cNumber"];
+            [defaults setObject:self.email.text forKey: @"cEmail"];
+            [defaults synchronize];
+        }
     }
     //Wehn Edit is clicked
     else{
@@ -61,7 +71,7 @@
         self.phone.enabled = YES;
         self.email.enabled = YES;
     }
-
+    
 }
 
 @end
