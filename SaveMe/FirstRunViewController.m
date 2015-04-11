@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *cNumber;
 @property (weak, nonatomic) IBOutlet UITextField *cEmail;
 - (IBAction)saveButton:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *error;
 
 @end
 
@@ -49,7 +48,13 @@
 //Saves all values
 - (IBAction)saveButton:(id)sender {
     if([self.oName.text isEqual:@""] || [self.cName.text isEqual:@""] || [self.cNumber.text isEqual:@""] || [self.cEmail.text isEqual:@""]){
-        self.error.text = @"All fields are require";
+        //Displaying alert for validation
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"All fields are required."
+                                                        message:@"You must fill all the details to use this app."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
     }
     else{
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
