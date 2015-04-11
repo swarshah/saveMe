@@ -25,6 +25,16 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void) viewDidAppear:(BOOL)animated{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *name = [defaults objectForKey:@"cName"];
+    NSString *number = [defaults objectForKey:@"cNumber"];
+    NSString *email = [defaults objectForKey:@"cEmail"];
+    self.name.text = name;
+    self.phone.text = number;
+    self.email.text = email;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -38,6 +48,11 @@
         self.name.enabled = NO;
         self.phone.enabled = NO;
         self.email.enabled = NO;
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:self.name.text forKey: @"cName"];
+        [defaults setObject:self.phone.text forKey: @"cNumber"];
+        [defaults setObject:self.email.text forKey: @"cEmail"];
+        [defaults synchronize];
     }
     //Wehn Edit is clicked
     else{
