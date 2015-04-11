@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		587CD63F1AD88B480068A3F3 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 587CD63C1AD88B480068A3F3 /* home.png */; };
+		587CD6401AD88B480068A3F3 /* house-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 587CD63D1AD88B480068A3F3 /* house-7.png */; };
+		587CD6411AD88B480068A3F3 /* man.png in Resources */ = {isa = PBXBuildFile; fileRef = 587CD63E1AD88B480068A3F3 /* man.png */; };
 		58C3C8CE1AD647E400585FF6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C3C8CD1AD647E400585FF6 /* CoreLocation.framework */; };
 		58FC625E1AD59B6600A75564 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FC625D1AD59B6600A75564 /* Foundation.framework */; };
 		58FC62601AD59B6600A75564 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FC625F1AD59B6600A75564 /* CoreGraphics.framework */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		587CD63C1AD88B480068A3F3 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = SaveMe/home.png; sourceTree = "<group>"; };
+		587CD63D1AD88B480068A3F3 /* house-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "house-7.png"; path = "SaveMe/house-7.png"; sourceTree = "<group>"; };
+		587CD63E1AD88B480068A3F3 /* man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = man.png; path = SaveMe/man.png; sourceTree = "<group>"; };
 		58C3C8CD1AD647E400585FF6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		58FC625A1AD59B6600A75564 /* SaveMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FC625D1AD59B6600A75564 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,9 +94,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		587CD62F1AD8808D0068A3F3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				587CD63C1AD88B480068A3F3 /* home.png */,
+				587CD63D1AD88B480068A3F3 /* house-7.png */,
+				587CD63E1AD88B480068A3F3 /* man.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		58FC62511AD59B6600A75564 = {
 			isa = PBXGroup;
 			children = (
+				587CD62F1AD8808D0068A3F3 /* Images */,
 				58FC62631AD59B6600A75564 /* SaveMe */,
 				58FC62851AD59B6600A75564 /* SaveMeTests */,
 				58FC625C1AD59B6600A75564 /* Frameworks */,
@@ -242,8 +259,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				587CD6411AD88B480068A3F3 /* man.png in Resources */,
+				587CD63F1AD88B480068A3F3 /* home.png in Resources */,
 				58FC62791AD59B6600A75564 /* Images.xcassets in Resources */,
 				58FC62681AD59B6600A75564 /* InfoPlist.strings in Resources */,
+				587CD6401AD88B480068A3F3 /* house-7.png in Resources */,
 				58FC62711AD59B6600A75564 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
