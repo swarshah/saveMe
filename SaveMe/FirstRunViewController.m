@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *cNumber;
 @property (weak, nonatomic) IBOutlet UITextField *cEmail;
 - (IBAction)saveButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *error;
 
 @end
 
@@ -47,15 +48,20 @@
 
 //Saves all values
 - (IBAction)saveButton:(id)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:@"false" forKey: @"firstRun"];
-    [defaults setObject:self.oName.text forKey: @"oName"];
-    [defaults setObject:self.cName.text forKey: @"cName"];
-    [defaults setObject:self.cNumber.text forKey: @"cNumber"];
-    [defaults setObject:self.cEmail.text forKey: @"cEmail"];
-    [defaults synchronize];
-    NSLog(@"Saved all data");
-    //Segue push
-    [self performSegueWithIdentifier:@"AssociateBack" sender:NULL];
+    if([self.oName.text isEqual:@""] || [self.cName.text isEqual:@""] || [self.cNumber.text isEqual:@""] || [self.cEmail.text isEqual:@""]){
+        self.error.text = @"All fields are require";
+    }
+    else{
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:@"false" forKey: @"firstRun"];
+        [defaults setObject:self.oName.text forKey: @"oName"];
+        [defaults setObject:self.cName.text forKey: @"cName"];
+        [defaults setObject:self.cNumber.text forKey: @"cNumber"];
+        [defaults setObject:self.cEmail.text forKey: @"cEmail"];
+        [defaults synchronize];
+        NSLog(@"Saved all data");
+        //Segue push to home screen
+        [self performSegueWithIdentifier:@"AssociateBack" sender:NULL];
+    }
 }
 @end
