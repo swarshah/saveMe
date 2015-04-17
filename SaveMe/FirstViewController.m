@@ -54,6 +54,7 @@
     manager.delegate = self;
     manager.desiredAccuracy = kCLLocationAccuracyBest;  //get best accuracy
     [manager startUpdatingLocation];    //start getting location
+	[manager requestAlwaysAuthorization]; 	//Get's the permission of using location
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
